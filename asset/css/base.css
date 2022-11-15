@@ -1,0 +1,83 @@
+:root {
+    --text-color: #172E1A;
+    --primary-color: #437A37;
+    --green-color: #97B360;
+    --smoke-gray-color: #C5D7D7;
+    --grey-color: #536C69;
+    --white-color: #ffffff;
+    --black-color: #000;
+
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    --header-sort-bar-height: 46px
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Playfair Display', serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* BUTTON */
+.btn {
+    min-width: 142px;
+    height: 36px;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--black-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    line-height: 1.6rem;
+}
+.btn.btn--size-s {
+    height: 30px;
+    font-size: 12px;
+    padding: 0 8px;
+}
+.btn.btn--normal:hover{
+    background-color: rgba(0,0,0,0.05);
+}
+.btn.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+.btn.btn--disabled {
+    cursor: default;
+    background-color: #c3c3c3;
+    color: #949494;
+}
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: 1;
+    }
+}
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+    
+}
